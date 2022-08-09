@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, 
+    rgba(238, 219, 231, 0.01)30%,
+    rgba(59, 84, 228, 0.1)50%),
+    /*rgba(59, 84, 228, 0.9)10%,*/
+    url(2.jpg);
+
+    background-position: center;
+    background-size: cover;
+}
+.navbarContainer{
+    background-color: rgb(162, 228, 162);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+#navbarLogo{
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: cursive, 'MV Boli';
+    color:#fff;
+    cursor: pointer;
+}/*
+#navbarLogo span{
+    color:rgb(255, 255, 255);
+}*/
+#navbarLogo:hover{
+    color:rgb(240, 62, 115);
+    transition: all 0.5s ease-in-out;
+}
+.navbarContainer ul{
+    list-style: none;
+    display: flex;
+}
+.navbarContainer ul li{
+    padding: 10px 20px;
+    position: relative;
+}
+.navbarContainer ul li a{
+    color:rgb(248, 123, 171);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'MV Boli';
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.navbarContainer ul li a:hover{
+    color:rgb(255, 255, 255);
+}
+
+.dropdownGames{
+    display: none;
+}
+.navbarContainer ul li:hover .dropdownGames{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgb(162, 228, 162);
+}
+.navbarContainer ul li:hover .dropdownGames ul{
+    display: block;
+    
+}
+.navbarContainer ul li:hover .dropdownGames ul li{
+    margin: 5px;
+}
+.navbarContainer ul li:hover .dropdownGames ul li a{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbarToggle{
+    display: none;
+}
+
+
+@media only screen and (max-width: 800px){
+    .navbarToggle{
+        display: grid;
+        cursor: pointer;
+    }
+    .navbarToggle .bar{
+        width: 30px;
+        height: 5px;
+        margin: 3px auto;
+        transition: all 0.9s ease-in-out;
+        background: rgb(255, 255, 255);
+    }
+    .navbarToggle:hover{
+        background: rgb(255, 162, 201);
+    }
+
+    .navbarContainer ul{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(162, 228, 162);
+        position: absolute;
+        left:0;
+        width: 100%;
+        height: fit-contents;
+        top: 78px;
+        opacity: -1;
+        z-index: -1;
+        transition: all 1s ease;
+    }
+    .navbarContainer ul li{
+        padding-left: 40px;
+    }
+    .navbarContainer ul.active{
+        opacity: 1;
+        z-index: 1;
+    }
+    .navbarToggle.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .navbarToggle.is-active .bar:nth-child(1){
+        transform: translateY(11px) rotate(45deg);
+    }
+    .navbarToggle.is-active .bar:nth-child(3){
+        transform: translateY(-11px) rotate(-45deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+.navbarContainer ul li{
+    position: relative;
+    padding: 0 50px;
+}
+
+
+
+.navbarMenu{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding: 0;
+    margin-left: 25rem;
+    list-style: none;
+}
+.navbarItem{
+    color:rgb(255, 132, 169);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'MV Boli';
+    font-weight: bold;
+    gap: 2rem;
+    cursor: pointer;
+}
+.navbarItem:hover{
+    color:rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+}
+.navbarLink{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    display: grid;
+}
+.dropdownGames{
+    display: block;
+    position: absolute;
+}
+.dropdownGames ul {
+    display: block;
+    margin: 10px;
+}
+.dropdownGames ul li{
+    width: 150px;
+    padding: 10px;
+}
+*/
