@@ -1,0 +1,17 @@
+#ulist li a{
+    font-family: "MV Boli";
+    font-size: 20px;
+    color: #ffffff;
+}
+#ulist li a:hover{
+    color: rgb(255, 195, 250);
+}
+#soner{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: x-large;
+    color: #ffffff;
+}
+#soner:hover{
+    color: #d82222;
+}
